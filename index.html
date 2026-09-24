@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GamePTBR | Traduções de Jogos em Português</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0c0f14;
+      color: #ffffff;
+    }
+
+    header {
+      background: #111722;
+      padding: 22px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #242b36;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .logo span {
+      color: #22c55e;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-left: 25px;
+    }
+
+    nav a:hover {
+      color: #22c55e;
+    }
+
+    .hero {
+      min-height: 470px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background:
+        linear-gradient(rgba(6,9,14,.75), rgba(6,9,14,.95)),
+        radial-gradient(circle at center, #263952 0%, #0c0f14 65%);
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 70px);
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #22c55e;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #aeb8c7;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 28px;
+      background: #22c55e;
+      color: #07110b;
+      text-decoration: none;
+      padding: 15px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+      padding: 65px 0;
+    }
+
+    .section-title {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .section-description {
+      color: #94a3b8;
+      margin-bottom: 35px;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .game-card {
+      background: #151b25;
+      border: 1px solid #293140;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: .25s;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+      border-color: #22c55e;
+    }
+
+    .game-image {
+      height: 190px;
+      background:
+        linear-gradient(135deg, #273449, #10151e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+    }
+
+    .game-info {
+      padding: 22px;
+    }
+
+    .game-info h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .status {
+      display: inline-block;
+      background: rgba(34,197,94,.15);
+      color: #4ade80;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .game-info p {
+      color: #9ca8ba;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #22c55e;
+      color: #07110b;
+      text-decoration: none;
+      padding: 11px 18px;
+      border-radius: 7px;
+      font-weight: bold;
+    }
+
+    .about {
+      background: #111722;
+      border: 1px solid #28313f;
+      border-radius: 14px;
+      padding: 35px;
+      color: #bdc7d5;
+      line-height: 1.8;
+    }
+
+    footer {
+      border-top: 1px solid #242b36;
+      text-align: center;
+      color: #778397;
+      padding: 30px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        display: block;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    Game<span>PTBR</span>
+  </div>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#traducoes">Traduções</a>
+    <a href="#sobre">Sobre</a>
+  </nav>
+
+</header>
+
+<section class="hero" id="inicio">
+
+  <div>
+    <h1>Seus jogos em <span>Português</span></h1>
+
+    <p>
+      Traduções de jogos para Português do Brasil feitas para tornar
+      grandes aventuras mais acessíveis para jogadores brasileiros.
+    </p>
+
+    <a class="hero-button" href="#traducoes">
+      VER TRADUÇÕES
+    </a>
+  </div>
+
+</section>
+
+<main class="container" id="traducoes">
+
+  <h2 class="section-title">Traduções disponíveis</h2>
+
+  <p class="section-description">
+    Veja os projetos disponíveis e acompanhe as próximas traduções.
+  </p>
+
+  <div class="games">
+
+    <article class="game-card">
+
+      <div class="game-image">
+        ⚔️
+      </div>
+
+      <div class="game-info">
+
+        <span class="status">
+          ✓ TRADUÇÃO CONCLUÍDA
+        </span>
+
+        <h3>Risen 2: Dark Waters</h3>
+
+        <p>
+          Tradução completa para Português do Brasil.
+          Instalação simples através de instalador próprio.
+        </p>
+
+        <a href="#" class="button">
+          VER TRADUÇÃO
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <article class="game-card">
+
+      <div class="game-image">
+        🎮
+      </div>
+
+      <div class="game-info">
+
+        <span class="status">
+          EM BREVE
+        </span>
+
+        <h3>Próxima tradução</h3>
+
+        <p>
+          Novos projetos serão adicionados ao GamePTBR.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</main>
+
+
+<section class="container" id="sobre">
+
+  <h2 class="section-title">Sobre o GamePTBR</h2>
+
+  <div class="about">
+
+    <p>
+      O GamePTBR é um projeto dedicado à criação e distribuição
+      de traduções de jogos para Português do Brasil.
+    </p>
+
+    <br>
+
+    <p>
+      Os jogos originais não são distribuídos neste site.
+      Para utilizar uma tradução é necessário possuir uma cópia
+      compatível do jogo.
+    </p>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>
+    GamePTBR © 2026
+  </p>
+
+</footer>
+
+</body>
+</html>
