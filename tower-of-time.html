@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tower of Time PT-BR | GamePTBR</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#090909;
+    color:#ffffff;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* CABEÇALHO */
+
+header{
+    background:#1c1c1c;
+    border-bottom:3px solid #e30613;
+}
+
+.header-container{
+    width:min(1200px,92%);
+    min-height:88px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    color:#ffffff;
+    font-size:34px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#e30613;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:#ffffff;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#e30613;
+}
+
+/* HERO */
+
+.hero{
+    min-height:390px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.96) 0%,
+            rgba(0,0,0,.79) 45%,
+            rgba(0,0,0,.30) 100%
+        ),
+        url("Tower.webp") center / cover no-repeat;
+
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid #252525;
+}
+
+.hero-content{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+.tag{
+    display:inline-block;
+    padding:7px 12px;
+    background:#e30613;
+    border-radius:4px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:48px;
+    max-width:720px;
+    line-height:1.1;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:650px;
+    color:#d0d0d0;
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* CONTEÚDO */
+
+.container{
+    width:min(1200px,92%);
+    margin:45px auto 70px;
+}
+
+.game-layout{
+    display:grid;
+    grid-template-columns:350px minmax(0,1fr);
+    gap:40px;
+    align-items:start;
+}
+
+/* CAPA */
+
+.cover-card{
+    background:#151515;
+    border:1px solid #303030;
+    border-radius:12px;
+    overflow:hidden;
+    position:sticky;
+    top:25px;
+}
+
+.cover-card img{
+    width:100%;
+    display:block;
+}
+
+.cover-info{
+    padding:20px;
+}
+
+.status{
+    display:inline-block;
+    color:#ff4d57;
+    background:rgba(227,6,19,.13);
+    border:1px solid rgba(227,6,19,.25);
+    padding:7px 10px;
+    border-radius:4px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.info-row{
+    padding:10px 0;
+    border-bottom:1px solid #292929;
+    color:#bdbdbd;
+    line-height:1.5;
+}
+
+.info-row strong{
+    color:#ffffff;
+}
+
+/* BLOCOS */
+
+.content h2{
+    font-size:29px;
+    margin-bottom:18px;
+    padding-bottom:10px;
+    border-bottom:3px solid #e30613;
+}
+
+.content p{
+    color:#c2c2c2;
+    line-height:1.8;
+    font-size:17px;
+}
+
+.section{
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:12px;
+    padding:28px;
+    margin-bottom:28px;
+}
+
+/* DOWNLOAD */
+
+.download-box{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(227,6,19,.16),
+            rgba(20,20,20,.95)
+        );
+    border:1px solid #4a1c1f;
+}
+
+.download-box p{
+    margin-bottom:20px;
+}
+
+.download-button{
+    display:inline-block;
+    background:#e30613;
+    color:#ffffff;
+    padding:15px 25px;
+    border-radius:6px;
+    font-size:16px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.download-button:hover{
+    background:#ff1724;
+    transform:translateY(-2px);
+}
+
+/* INSTALAÇÃO */
+
+.steps{
+    counter-reset:steps;
+}
+
+.step{
+    position:relative;
+    padding:16px 15px 16px 60px;
+    margin-bottom:12px;
+    background:#1d1d1d;
+    border-radius:7px;
+    color:#cccccc;
+    line-height:1.5;
+}
+
+.step::before{
+    counter-increment:steps;
+    content:counter(steps);
+
+    position:absolute;
+    left:16px;
+    top:12px;
+
+    width:31px;
+    height:31px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#e30613;
+    color:#ffffff;
+    border-radius:50%;
+    font-weight:bold;
+}
+
+/* AVISO */
+
+.notice{
+    border-left:4px solid #e30613;
+    background:#1b1b1b;
+    padding:18px;
+    color:#bfbfbf;
+    line-height:1.7;
+}
+
+/* VOLTAR */
+
+.back{
+    display:inline-block;
+    color:#ffffff;
+    margin-bottom:25px;
+}
+
+.back:hover{
+    color:#e30613;
+}
+
+/* RODAPÉ */
+
+footer{
+    background:#111111;
+    border-top:1px solid #292929;
+    color:#777777;
+    text-align:center;
+    padding:30px;
+}
+
+/* CELULAR */
+
+@media(max-width:800px){
+
+    .header-container{
+        flex-direction:column;
+        padding:20px 0;
+    }
+
+    .game-layout{
+        grid-template-columns:1fr;
+    }
+
+    .cover-card{
+        position:static;
+        max-width:450px;
+        margin:auto;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="header-container">
+
+        <a href="index.html" class="logo">
+            Game<span>PTBR</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="index.html#traducoes">Traduções</a>
+            <a href="index.html#sobre">Sobre</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="tag">
+            TRADUÇÃO PT-BR
+        </span>
+
+        <h1>
+            Tower of Time
+        </h1>
+
+        <p>
+            Tradução para Português do Brasil do RPG
+            Tower of Time para PC.
+        </p>
+
+    </div>
+
+</section>
+
+
+<div class="container">
+
+    <a href="index.html" class="back">
+        ← Voltar para as traduções
+    </a>
+
+
+    <div class="game-layout">
+
+
+        <aside class="cover-card">
+
+            <img
+                src="Tower.webp"
+                alt="Tower of Time"
+            >
+
+            <div class="cover-info">
+
+                <div class="status">
+                    TRADUÇÃO CONCLUÍDA
+                </div>
+
+                <div class="info-row">
+                    <strong>Jogo:</strong><br>
+                    Tower of Time
+                </div>
+
+                <div class="info-row">
+                    <strong>Plataforma:</strong><br>
+                    PC
+                </div>
+
+                <div class="info-row">
+                    <strong>Idioma:</strong><br>
+                    Português do Brasil
+                </div>
+
+                <div class="info-row">
+                    <strong>Status:</strong><br>
+                    Concluída
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <main class="content">
+
+
+            <section class="section">
+
+                <h2>Sobre a tradução</h2>
+
+                <p>
+                    Esta tradução adapta Tower of Time para
+                    Português do Brasil, permitindo acompanhar
+                    diálogos, menus, descrições, missões e outros
+                    textos do jogo em português.
+                </p>
+
+            </section>
+
+
+            <section class="section download-box">
+
+                <h2>Baixar tradução</h2>
+
+                <p>
+                    Faça o download da tradução de Tower of Time
+                    para Português do Brasil.
+                </p>
+
+                <a
+                    href="#"
+                    class="download-button"
+                >
+                    BAIXAR TRADUÇÃO
+                </a>
+
+            </section>
+
+
+            <section class="section">
+
+                <h2>Como instalar</h2>
+
+                <div class="steps">
+
+                    <div class="step">
+                        Baixe o arquivo da tradução.
+                    </div>
+
+                    <div class="step">
+                        Extraia o conteúdo, caso o arquivo esteja compactado.
+                    </div>
+
+                    <div class="step">
+                        Execute o instalador ou siga as instruções
+                        fornecidas com a tradução.
+                    </div>
+
+                    <div class="step">
+                        Se solicitado, selecione a pasta onde
+                        Tower of Time está instalado.
+                    </div>
+
+                    <div class="step">
+                        Finalize a instalação e abra o jogo normalmente.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="section">
+
+                <h2>Requisitos</h2>
+
+                <p>
+                    É necessário possuir uma cópia compatível de
+                    Tower of Time instalada no computador.
+                    O GamePTBR não distribui o jogo original.
+                </p>
+
+            </section>
+
+
+            <section class="section">
+
+                <h2>Créditos</h2>
+
+                <p>
+                    Os créditos completos da tradução serão
+                    apresentados nesta área.
+                </p>
+
+            </section>
+
+
+            <div class="notice">
+
+                O GamePTBR disponibiliza somente os arquivos
+                relacionados à tradução. O jogo original deve ser
+                adquirido separadamente.
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<footer>
+    GamePTBR © 2026
+</footer>
+
+</body>
+</html>
