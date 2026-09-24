@@ -1,327 +1,650 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>GamePTBR | Traduções de Jogos em Português</title>
+<title>GamePTBR | Traduções de Jogos</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #090909;
-      color: #ffffff;
-    }
-
-    header {
-      background: #111111;
-      padding: 22px 8%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #242b36;
-    }
-
-    .logo {
-      font-size: 26px;
-      font-weight: bold;
-      color: #ffffff;
-    }
-
-    .logo span {
-      color: #e30613;
-    }
-
-    nav a {
-      color: #cbd5e1;
-      text-decoration: none;
-      margin-left: 25px;
-    }
-
-    nav a:hover {
-      color: #e30613;
-    }
-
-    .hero {
-      min-height: 390px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
-      background:
-        linear-gradient(rgba(6,9,14,.75), rgba(6,9,14,.95)),
-        radial-gradient(circle at center, #263952 0%, #090909 65%);
-    }
-
-    .hero h1 {
-      font-size: clamp(38px, 7vw, 70px);
-      margin-bottom: 15px;
-    }
-
-    .hero h1 span {
-      color: #e30613;
-    }
-
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      color: #aeb8c7;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .hero-button {
-      display: inline-block;
-      margin-top: 28px;
-      background: #e30613;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 15px 28px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-      padding: 65px 0;
-    }
-.section-title {
-  font-size: 30px;
-  margin-bottom: 18px;
-  color: #ffffff;
-  display: inline-block;
-  padding-bottom: 8px;
-  border-bottom: 3px solid #e30613;
-} 
-
-    .section-description {
-      color: #94a3b8;
-      margin-bottom: 35px;
-    }
-
-    .games {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .game-card {
-      background: #151515;
-      border: 1px solid #293140;
-      border-radius: 14px;
-      overflow: hidden;
-      transition: .25s;
-    }
-
-    .game-card:hover {
-      transform: translateY(-5px);
-      border-color: #e30613;
-    }
-
-    .game-image {
-  width: 100%;
-  height: 210px;
-  object-fit: cover;
-  display: block;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-    .game-info {
-      padding: 22px;
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#090909;
+    color:#fff;
+}
+
+/* CABEÇALHO */
+
+header{
+    background:#1c1c1c;
+    border-bottom:3px solid #e30613;
+}
+
+.header-container{
+    width:min(1200px,92%);
+    margin:auto;
+    min-height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.logo{
+    font-size:34px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#e30613;
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.menu a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.menu a:hover{
+    color:#e30613;
+}
+
+/* PESQUISA */
+
+.search-box{
+    display:flex;
+    border:1px solid #555;
+    border-radius:30px;
+    overflow:hidden;
+    background:#111;
+}
+
+.search-box input{
+    width:210px;
+    padding:12px 16px;
+    border:0;
+    outline:none;
+    background:transparent;
+    color:#fff;
+}
+
+.search-box button{
+    border:0;
+    padding:0 18px;
+    cursor:pointer;
+    background:#e30613;
+    color:#fff;
+    font-weight:bold;
+}
+
+/* DESTAQUE */
+
+.featured{
+    width:min(1200px,92%);
+    margin:35px auto 0;
+    min-height:330px;
+    border-radius:16px;
+    overflow:hidden;
+    position:relative;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.95) 0%,
+            rgba(0,0,0,.78) 45%,
+            rgba(0,0,0,.25) 100%
+        ),
+        url("Risen2.jpg") center 28% / cover no-repeat;
+    border:1px solid #292929;
+}
+
+.featured-content{
+    max-width:650px;
+    padding:65px 55px;
+}
+
+.featured-label{
+    display:inline-block;
+    background:#e30613;
+    color:#fff;
+    padding:7px 12px;
+    border-radius:4px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.featured h1{
+    font-size:40px;
+    line-height:1.15;
+    margin-bottom:16px;
+}
+
+.featured p{
+    color:#ccc;
+    line-height:1.7;
+    margin-bottom:24px;
+}
+
+.btn{
+    display:inline-block;
+    background:#e30613;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#ff1724;
+}
+
+/* CONTEÚDO */
+
+.page{
+    width:min(1200px,92%);
+    margin:35px auto 70px;
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) 310px;
+    gap:35px;
+}
+
+.section-title{
+    font-size:28px;
+    margin-bottom:25px;
+    padding-bottom:10px;
+    border-bottom:3px solid #e30613;
+}
+
+/* CARDS */
+
+.posts{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:24px;
+}
+
+.card{
+    background:#181818;
+    border:1px solid #303030;
+    border-radius:14px;
+    overflow:hidden;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:#e30613;
+}
+
+.card-image{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    display:block;
+    background:#111;
+}
+
+.card.risen .card-image{
+    object-position:center 22%;
+}
+
+.card.tower .card-image{
+    object-position:center;
+}
+
+.card-body{
+    padding:22px;
+}
+
+.platform{
+    color:#ff4d57;
+    font-size:12px;
+    font-weight:bold;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.card h2{
+    font-size:23px;
+    line-height:1.3;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#bfbfbf;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.meta{
+    color:#777;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+/* SIDEBAR */
+
+.sidebar section{
+    background:#171717;
+    border:1px solid #2c2c2c;
+    border-radius:10px;
+    padding:22px;
+    margin-bottom:22px;
+}
+
+.sidebar h3{
+    font-size:17px;
+    border-bottom:2px solid #e30613;
+    padding-bottom:10px;
+    margin-bottom:17px;
+}
+
+.category{
+    display:flex;
+    justify-content:space-between;
+    background:#222;
+    padding:11px 12px;
+    margin-bottom:8px;
+    border-radius:5px;
+    color:#ddd;
+}
+
+.category span{
+    color:#e30613;
+}
+
+.latest-item{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px solid #292929;
+}
+
+.latest-item:last-child{
+    border-bottom:0;
+}
+
+.latest-item img{
+    width:75px;
+    height:60px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.latest-item a{
+    color:#fff;
+    text-decoration:none;
+    line-height:1.4;
+    font-size:14px;
+}
+
+.latest-item a:hover{
+    color:#e30613;
+}
+
+/* SOBRE */
+
+.about{
+    margin-top:45px;
+    background:#151515;
+    border:1px solid #292929;
+    padding:28px;
+    border-radius:10px;
+}
+
+.about p{
+    color:#bbb;
+    line-height:1.8;
+}
+
+/* RODAPÉ */
+
+footer{
+    border-top:1px solid #292929;
+    background:#111;
+    color:#777;
+    text-align:center;
+    padding:30px;
+}
+
+/* CELULAR */
+
+@media(max-width:900px){
+
+    .header-container{
+        flex-direction:column;
+        padding:20px 0;
     }
 
-    .game-info h3 {
-      font-size: 23px;
-      margin-bottom: 10px;
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
     }
 
-    .status {
-      display: inline-block;
-      background: rgba(227,6,19,.15);
-      color: #ff4d5a;
-      padding: 6px 10px;
-      border-radius: 6px;
-      font-size: 13px;
-      margin-bottom: 15px;
+    .page{
+        grid-template-columns:1fr;
     }
 
-    .game-info p {
-      color: #9ca8ba;
-      line-height: 1.6;
-      margin-bottom: 20px;
+    .featured{
+        min-height:360px;
     }
 
-    .button {
-      display: inline-block;
-      background: #e30613;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 11px 18px;
-      border-radius: 7px;
-      font-weight: bold;
+    .featured-content{
+        padding:45px 30px;
     }
 
-    .about {
-      background: #111111;
-      border: 1px solid #28313f;
-      border-radius: 14px;
-      padding: 35px;
-      color: #bdc7d5;
-      line-height: 1.8;
+}
+
+@media(max-width:650px){
+
+    .posts{
+        grid-template-columns:1fr;
     }
 
-    footer {
-      border-top: 1px solid #242b36;
-      text-align: center;
-      color: #778397;
-      padding: 30px;
-      margin-top: 40px;
+    .featured h1{
+        font-size:30px;
     }
 
-    @media (max-width: 650px) {
-      header {
-        display: block;
-        text-align: center;
-      }
-
-      nav {
-        margin-top: 15px;
-      }
-
-      nav a {
-        margin: 0 8px;
-     
+    .search-box input{
+        width:170px;
     }
-  </style>
+
+    .card-image{
+        height:230px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
 
-  <div class="logo">
-    Game<span>PTBR</span>
-  </div>
+    <div class="header-container">
 
-  <nav>
-    <a href="#inicio">Início</a>
-    <a href="#traducoes">Traduções</a>
-    <a href="#sobre">Sobre</a>
-  </nav>
+        <div class="logo">
+            Game<span>PTBR</span>
+        </div>
+
+        <nav class="menu">
+            <a href="#">Início</a>
+            <a href="#traducoes">Traduções</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+
+        <div class="search-box">
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Pesquisar..."
+            >
+            <button onclick="buscar()">Buscar</button>
+        </div>
+
+    </div>
 
 </header>
 
-<section class="hero" id="inicio">
 
-  <div>
-    <h1>Seus jogos em <span>Português</span></h1>
+<section class="featured">
 
-    <p>
-      Traduções de jogos para Português do Brasil feitas para tornar
-      grandes aventuras mais acessíveis para jogadores brasileiros.
-    </p>
+    <div class="featured-content">
 
-    <a class="hero-button" href="#traducoes">
-      VER TRADUÇÕES
-    </a>
-  </div>
+        <span class="featured-label">
+            DESTAQUE
+        </span>
+
+        <h1>
+            Risen 2: Dark Waters em Português do Brasil
+        </h1>
+
+        <p>
+            Tradução para PC desenvolvida para permitir que jogadores
+            brasileiros aproveitem a aventura de Risen 2 em Português do Brasil.
+        </p>
+
+        <a href="#" class="btn">
+            VER TRADUÇÃO
+        </a>
+
+    </div>
 
 </section>
 
 
-</section>
-<main class="container" id="traducoes">
+<div class="page">
 
-  <h2 class="section-title">Traduções disponíveis</h2>
+    <main id="traducoes">
 
-  <p class="section-description">
-    Veja os projetos disponíveis e acompanhe as próximas traduções.
-  </p>
+        <h2 class="section-title">
+            Traduções recentes
+        </h2>
 
- <div class="games">
+        <div class="posts">
 
-  <article class="game-card">
-    <img src="risen2.jpg" alt="Risen 2 Dark Waters" class="game-image">
+            <article class="card risen">
 
-    <div class="game-info">
-      <span class="status">TRADUÇÃO CONCLUÍDA</span>
-      <h3>Risen 2: Dark Waters</h3>
-      <p>
-        Tradução completa para Português do Brasil com instalação simples.
-      </p>
-      <a href="#" class="button">VER TRADUÇÃO</a>
-    </div>
-  </article>
+                <img
+                    class="card-image"
+                    src="Risen2.jpg"
+                    alt="Risen 2 Dark Waters"
+                >
 
-  <article class="game-card">
-    <img src="jogo2.jpg" alt="Próxima tradução" class="game-image">
+                <div class="card-body">
 
-    <div class="game-info">
-      <span class="status">EM BREVE</span>
-      <h3>Próxima tradução</h3>
-      <p>
-        Novo projeto em desenvolvimento para Português do Brasil.
-      </p>
-      <a href="#" class="button">EM BREVE</a>
-    </div>
-  </article>
+                    <div class="platform">
+                        PC • PORTUGUÊS DO BRASIL
+                    </div>
 
-  <article class="game-card">
-    <img src="jogo3.jpg" alt="Próxima tradução" class="game-image">
+                    <h2>
+                        Tradução do Risen 2: Dark Waters
+                    </h2>
 
-    <div class="game-info">
-      <span class="status">EM BREVE</span>
-      <h3>Próxima tradução</h3>
-      <p>
-        Mais uma tradução será adicionada em breve ao GamePTBR.
-      </p>
-      <a href="#" class="button">EM BREVE</a>
-    </div>
-  </article>
+                    <div class="meta">
+                        GamePTBR
+                    </div>
+
+                    <p>
+                        Tradução completa de Risen 2: Dark Waters
+                        para Português do Brasil.
+                    </p>
+
+                    <a href="#" class="btn">
+                        VER TRADUÇÃO
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="card tower">
+
+                <img
+                    class="card-image"
+                    src="Tower.webp"
+                    alt="Tower of Time"
+                >
+
+                <div class="card-body">
+
+                    <div class="platform">
+                        PC • PORTUGUÊS DO BRASIL
+                    </div>
+
+                    <h2>
+                        Tradução do Tower of Time
+                    </h2>
+
+                    <div class="meta">
+                        GamePTBR
+                    </div>
+
+                    <p>
+                        Tradução de Tower of Time para Português do Brasil.
+                    </p>
+
+                    <a href="#" class="btn">
+                        VER TRADUÇÃO
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <section class="about" id="sobre">
+
+            <h2 class="section-title">
+                Sobre o GamePTBR
+            </h2>
+
+            <p>
+                O GamePTBR é um projeto dedicado à criação e distribuição
+                de traduções de jogos para Português do Brasil.
+                Os jogos originais não são distribuídos pelo site.
+                Para utilizar uma tradução, é necessário possuir
+                uma cópia compatível do jogo.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <aside class="sidebar">
+
+        <section>
+
+            <h3>Categorias</h3>
+
+            <div class="category">
+                Traduções para PC
+                <span>2</span>
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h3>Últimas traduções</h3>
+
+            <div class="latest-item">
+
+                <img src="Risen2.jpg" alt="Risen 2">
+
+                <a href="#">
+                    Risen 2: Dark Waters [PT-BR]
+                </a>
+
+            </div>
+
+            <div class="latest-item">
+
+                <img src="Tower.webp" alt="Tower of Time">
+
+                <a href="#">
+                    Tower of Time [PT-BR]
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h3>Status</h3>
+
+            <div class="category">
+                Traduções concluídas
+                <span>2</span>
+            </div>
+
+        </section>
+
+    </aside>
 
 </div>
 
-</main>
-
-
-<section class="container" id="sobre">
-
-  <h2 class="section-title">Sobre o GamePTBR</h2>
-
-  <div class="about">
-
-    <p>
-      O GamePTBR é um projeto dedicado à criação e distribuição
-      de traduções de jogos para Português do Brasil.
-    </p>
-
-    <br>
-
-    <p>
-      Os jogos originais não são distribuídos neste site.
-      Para utilizar uma tradução é necessário possuir uma cópia
-      compatível do jogo.
-    </p>
-
-  </div>
-
-</section>
-
 
 <footer>
-
-  <p>
     GamePTBR © 2026
-  </p>
-
 </footer>
+
+
+<script>
+
+function buscar(){
+
+    const termo =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+        document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+
+        const texto =
+            card.innerText.toLowerCase();
+
+        if(
+            termo === "" ||
+            texto.includes(termo)
+        ){
+            card.style.display = "block";
+        }else{
+            card.style.display = "none";
+        }
+
+    });
+
+    document
+        .getElementById("traducoes")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+document
+.getElementById("searchInput")
+.addEventListener("keydown", function(event){
+
+    if(event.key === "Enter"){
+        buscar();
+    }
+
+});
+
+</script>
 
 </body>
 </html>
