@@ -488,81 +488,13 @@ header{
             Traduções recentes
         </h2>
 
-        <div class="posts">
+<div class="posts" id="recentTranslations"></div>
 
-            <article class="card risen">
-
-                <img
-                    class="card-image"
-                    src="Risen2.jpg"
-                    alt="Risen 2 Dark Waters"
-                >
-
-                <div class="card-body">
-
-                    <div class="platform">
-                        PC • PORTUGUÊS DO BRASIL
-                    </div>
-
-                    <h2>
-                        Tradução do Risen 2: Dark Waters
-                    </h2>
-
-                    <div class="meta">
-                        GamePTBR
-                    </div>
-
-                    <p>
-                        Tradução completa de Risen 2: Dark Waters
-                        para Português do Brasil.
-                    </p>
-
-                    <a href="risen-2.html" class="btn">
-                        VER TRADUÇÃO
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="card tower">
-
-                <img
-                    class="card-image"
-                    src="Tower.webp"
-                    alt="Tower of Time"
-                >
-
-                <div class="card-body">
-
-                    <div class="platform">
-                        PC • PORTUGUÊS DO BRASIL
-                    </div>
-
-                    <h2>
-                        Tradução do Tower of Time
-                    </h2>
-
-                    <div class="meta">
-                        GamePTBR
-                    </div>
-
-                    <p>
-                        Tradução de Tower of Time para Português do Brasil.
-                    </p>
-
-                   <a href="tower-of-time.html" class="btn">
-    VER TRADUÇÃO
-</a>
-                
-
-                </div>
-
-            </article>
-
-        </div>
-
+<div style="text-align:center; margin-top:28px;">
+    <a href="traducoes.html" class="btn">
+        VER TODAS AS TRADUÇÕES
+    </a>
+</div>
 
         <section class="about" id="sobre">
 
@@ -693,6 +625,56 @@ document
 });
 
 </script>
+<script src="traducoes.js"></script>
 
+<script>
+const areaRecentes = document.getElementById("recentTranslations");
+
+const traducoesRecentes = [...traducoes]
+    .sort((a, b) => new Date(b.dataISO) - new Date(a.dataISO))
+    .slice(0, 6);
+
+traducoesRecentes.forEach(item => {
+
+    const card = document.createElement("article");
+    card.className = "card";
+
+    card.innerHTML = `
+        <img
+            class="card-image"
+            src="${item.imagem}"
+            alt="${item.nome}"
+        >
+
+        <div class="card-body">
+
+            <div class="platform">
+                ${item.plataforma} • ${item.idioma}
+            </div>
+
+            <h2>
+                Tradução do ${item.nome}
+            </h2>
+
+            <div class="meta">
+                GamePTBR
+            </div>
+
+            <p>
+                Tradução de ${item.nome} para Português do Brasil.
+            </p>
+
+            <a href="${item.pagina}" class="btn">
+                VER TRADUÇÃO
+            </a>
+
+        </div>
+    `;
+
+    areaRecentes.appendChild(card);
+
+});
+</script>
+    
 </body>
 </html>
