@@ -446,7 +446,8 @@ footer{
                <a
     href="https://github.com/GamePTBR/GamePTBR.github.io/releases/download/tower-of-time-v1.1/Tower_of_Time_PTBR_v1.1.rar"
     class="download-button"
->
+onclick="liberarComentariosTower()"
+ ">           
     BAIXAR TRADUÇÃO
 </a>
 
@@ -518,7 +519,44 @@ footer{
                 adquirido separadamente.
 
             </div>
+<section class="section">
 
+    <h2>Comentários</h2>
+
+    <p style="margin-bottom:25px;">
+        Já testou esta tradução? Conte se funcionou bem,
+        deixe sua opinião ou relate algum problema.
+    </p>
+
+    <div id="comentarios-bloqueados" class="notice">
+        🔒 Para deixar um comentário, primeiro clique em
+        <strong>BAIXAR TRADUÇÃO</strong>.
+    </div>
+
+    <div id="comentarios-disqus" style="display:none; margin-top:25px;">
+
+        <div id="disqus_thread"></div>
+
+        <script>
+        var disqus_config = function () {
+            this.page.url = 'https://gameptbr.github.io/tower-of-time.html';
+            this.page.identifier = 'tower-of-time';
+        };
+
+        (function() {
+            var d = document, s = d.createElement('script');
+
+            s.src = 'https://gameptbr.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+
+            (d.head || d.body).appendChild(s);
+        })();
+        </script>
+
+    </div>
+
+</section>
 
         </main>
 
@@ -530,6 +568,25 @@ footer{
 <footer>
     GamePTBR © 2026
 </footer>
+<script>
+function liberarComentariosTower() {
 
+    localStorage.setItem("baixou-tower", "sim");
+
+    document.getElementById("comentarios-bloqueados").style.display = "none";
+    document.getElementById("comentarios-disqus").style.display = "block";
+}
+
+window.addEventListener("DOMContentLoaded", function() {
+
+    if (localStorage.getItem("baixou-tower") === "sim") {
+
+        document.getElementById("comentarios-bloqueados").style.display = "none";
+        document.getElementById("comentarios-disqus").style.display = "block";
+
+    }
+
+});
+</script>
 </body>
 </html>
