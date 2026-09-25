@@ -412,7 +412,7 @@ function renderizar(){
         const correspondeLetra =
             letraSelecionada === "TODOS" ||
             nome.toUpperCase().startsWith(
-                letraSelecionada.toLowerCase()
+               letraSelecionada.toUpperCase()
             );
 
         return correspondePesquisa && correspondeLetra;
